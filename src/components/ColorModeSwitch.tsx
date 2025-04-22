@@ -4,13 +4,14 @@ export default function ColorModeSwitch() {
   const { toggleColorMode, colorMode } = useColorMode();
 
   return (
-    <HStack>
+    <HStack padding="10px">
       <Switch
         colorScheme="teal"
         isChecked={colorMode === "dark"}
         onChange={toggleColorMode}
       />
-      <Text>Dark mode</Text>
+
+      <Text whiteSpace="nowrap">Dark mode</Text>
     </HStack>
   );
 }
