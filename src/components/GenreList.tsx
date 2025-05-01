@@ -29,7 +29,7 @@ export default function GenreList({ selectedGenre, onSelectedGenre }: Props) {
       </Heading>
 
       <List>
-        {data.map((genre) => (
+        {data?.results.map((genre) => (
           <ListItem key={genre.id} paddingY="5px">
             <HStack>
               <Image
