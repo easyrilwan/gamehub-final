@@ -1,4 +1,5 @@
 import { Grid, Show, GridItem, Box, Flex } from "@chakra-ui/react";
+
 import GameGrid from "../components/GameGrid";
 import GameHeading from "../components/GameHeading";
 import GenreList from "../components/GenreList";
@@ -6,6 +7,8 @@ import PlatformSelector from "../components/PlatformSelector";
 import SortSelector from "../components/SortSelector";
 
 const HomePage = () => {
+  throw new Error("Something wrong");
+
   return (
     <Grid
       templateAreas={{
