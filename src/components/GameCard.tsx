@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { Card, CardBody, Heading, HStack, Image } from "@chakra-ui/react";
 
 import { Game } from "../hooks/useGames";
@@ -12,7 +14,7 @@ interface Props {
 
 export default function GameCard({ game }: Props) {
   return (
-    <Card>
+    <Card overflow="hidden">
       <Image src={getCroppedImageUrl(game.background_image)} />
 
       <CardBody>
@@ -25,7 +27,8 @@ export default function GameCard({ game }: Props) {
         </HStack>
 
         <Heading fontSize="2xl">
-          {game.name}
+          <Link to={"/games/" + game.slug}>{game.name}</Link>
+
           <Emoji rating={game.rating_top} />
         </Heading>
       </CardBody>
